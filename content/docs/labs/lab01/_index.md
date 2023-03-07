@@ -14,15 +14,15 @@ weight: 100
 
 ## 资源链接
 
-<a href="https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5" target="_blank">https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5</a>
+<a href="https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B" target="_blank">https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B</a>
 
-Valid Until: 2022-08-01 23:59
+Valid Until: 2023-07-15 23:59
 
 ## 实验指南
 
-1. 观看上述云盘链接中 Lab01 的视频
+1. 观看上述云盘链接中 Lab01 的视频（请务必观看，视频录制质量很高，讲解很清晰）
 2. 文字教程可查阅[Git简易教程](/SE-Labs/docs/labs/lab01/git/) 和[Git指令全集](/SE-Labs/docs/labs/lab01/git_command/)
-3. 完成实验作业并于 3.20 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
+3. 完成实验作业并于 3.18 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 ## 实验作业
 
@@ -148,7 +148,7 @@ Valid Until: 2022-08-01 23:59
 
 ### 提交方式
 
-- 截止时间：**2022/3/20 晚12点**
+- 截止时间：**2022/3/18 晚12点**
 - 提交方式：<a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 - 提交内容：两个 word 文档或 pdf 文档，放在压缩包内，命名格式如下
 
@@ -164,4 +164,5 @@ Valid Until: 2022-08-01 23:59
 1. 文档中必须包括各步骤说明以及相关截图。
 2. commit 时要求说清楚更改的内容。
 3. 任务二小组共同完成一份文档，组长和组员都需提交，文档模板见所给云盘资源 Lab01。
+4. 请务必按照上面的要求完成作业。如果我们发现作业中存在明显敷衍（比如步骤说明非常简略）的情况会 **酌情考虑扣分**。
 {{< /hint >}}
