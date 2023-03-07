@@ -157,14 +157,18 @@ Git 多工作区和版本库机制，允许你回头是岸。
 
 我们可以利用 Git 丰富的指令来完成版本控制和分支管理，但是可能有一些同学并不适应面对命令行的方式，实际上，在现阶段我们自己的项目的体量和技术水平下，往往并不需要进行版本回溯这种操作，一些分支合并、提交、冲突处理就基本够用了，这样简单的操作如果还要不断地写命令行未免有些繁琐。
 
-Git 官方推出了一款面向 Windows 用户（支持mac）的 Git 图形化管理工具 [GitHub Desktop](https://desktop.github.com/)。利用这款软件，我们可以以GUI的形式完成之前CLI中绝大多数的 Git 命令，并且更加便捷。
+Git 官方推出了一款面向 Windows 用户（支持mac）的 Git 图形化管理工具 [GitHub Desktop](https://desktop.github.com/)。利用这款软件，我们可以以GUI的形式完成之前CLI中绝大多数的 Git 命令，并且更加便捷。比如：
 
-比如可以在工具栏的 branch 中管理自己当前项目的分支，无论是 新建分支 还是 进行分支合并 都非常方便。
+可以直接在 GitHub 上 使用 GitHub Desktop 将 **项目一键克隆到本地**，而不是还要使用 `git clone + <冗长的链接>`（如果是配置 ssh 连接的话就更麻烦了），并且可以图形化监视克隆进度，操作便捷可靠。
+
+![GitHub Desktop 克隆项目](/SE-Labs/images/lab1/git_desktop_clone.png)
+
+可以在工具栏的 branch 中管理自己当前项目的分支，无论是 **新建/删除分支** 还是 **进行分支合并** 都非常方便。
 
 ![GitHub Desktop 分支管理](/SE-Labs/images/lab1/git_desktop_branch.png)
 
 对于最常见的代码提交，也可以一目了然地看到自己的更改，并写上 commit 信息以及更加具体的 description。
 
-![GitHub Desktop 分支管理](/SE-Labs/images/lab1/git_desktop_commit.png)
+![GitHub Desktop 提交管理](/SE-Labs/images/lab1/git_desktop_commit.png)
 
 GitHub Desktop 还有更多的功能（比如说上面提到的冲突管理），这里就不展开介绍了。
