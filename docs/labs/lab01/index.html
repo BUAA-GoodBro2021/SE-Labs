@@ -1,0 +1,64 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Lab01 Git # 实验目的 # 了解分布式版本控制系统的概念 掌握 Git 的基本指令 实践团队如何使用 Git 进行合作开发 实践分支合并时冲突的解决 资源链接 # https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5
+Valid Until: 2022-08-01 23:59
+实验指南 # 观看上述云盘链接中 Lab01 的视频 文字教程可查阅 Git简易教程 和 Git指令全集 完成实验作业并于 3.20 日晚 12 点前提交至 软院云平台 实验作业 # 远程仓库可选 Gitee 或 Github；操作过程中请保存好截图，根据后面所讲的提交方式打包提交。 任务一 个人作业 # 远程仓库上新建代码仓库（private），仓库名：Platform-学号。
+在仓库主页截图
+远程仓库上以 master/main 分支为基础，新建 dev 分支，添加 index.html 文件。（master/main 分支存储生产环境，dev 分支存储开发环境）
+在dev分支主页截图
+clone 远程仓库到本地，创建本地 dev 分支与远程同步。（此处结果应为在本地 dev 分支看到 index.html 文件）
+在控制台和本地目录截图
+在本地修改 index.html 文件（内容如下），上传本地改动到远程仓库。
+控制台命令、仓库主页查看 index."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Lab01 Git"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab01/"><title>Lab01 Git | 软件工程基础上机指南</title><link rel=manifest href=/SE-Labs/manifest.json><link rel=icon href=/SE-Labs/favicon.png type=image/x-icon><link rel=stylesheet href=/SE-Labs/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css integrity="sha256-gsXb0jRHzuC0wqo+0Izglh+qQOH6Nw7uT4yfAuDUa18=" crossorigin=anonymous><script defer src=/SE-Labs/flexsearch.min.js></script>
+<script defer src=/SE-Labs/en.search.min.6df40ce09760f2aef066110ff29ef7ba2ab4eeb653dda78fb62e8fe0c8ab6521.js integrity="sha256-bfQM4Jdg8q7wZhEP8p73uiq07rZT3aePti6P4MirZSE=" crossorigin=anonymous></script>
+<script defer src=/SE-Labs/sw.min.f070c2d3fe61272a24a6ca9a09530ce459448de39ce9b3c07c7e12ee4e7b69a1.js integrity="sha256-8HDC0/5hJyokpsqaCVMM5FlEjeOc6bPAfH4S7k57aaE=" crossorigin=anonymous></script>
+<link rel=alternate type=application/rss+xml href=https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab01/index.xml title=软件工程基础上机指南></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/SE-Labs/><span>软件工程基础上机指南</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Labs</span><ul><li><a href=/SE-Labs/docs/labs/lab01/ class=active>Lab01 Git</a><ul><li><a href=/SE-Labs/docs/labs/lab01/git/>Git 简易教程</a></li><li><a href=/SE-Labs/docs/labs/lab01/git_command/>Git 指令全集</a></li></ul></li><li><span>Lab02 前后端基础Ⅰ</span><ul></ul></li></ul></li></ul><ul><li><a href=https://github.com/BUAA-GoodBro2021/SE-Labs target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/SE-Labs/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Lab01 Git</strong>
+<label for=toc-control><img src=/SE-Labs/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#lab01-git>Lab01 Git</a><ul><li><a href=#实验目的>实验目的</a></li><li><a href=#资源链接>资源链接</a></li><li><a href=#实验指南>实验指南</a></li><li><a href=#实验作业>实验作业</a><ul><li><a href=#任务一-个人作业>任务一 个人作业</a></li><li><a href=#任务二-小组作业>任务二 小组作业</a><ul><li><a href=#初始创建与同步>初始创建与同步</a></li><li><a href=#合并分支练习>合并分支练习</a></li><li><a href=#合并分支冲突>合并分支冲突</a></li><li><a href=#完成发布>完成发布</a></li></ul></li><li><a href=#提交方式>提交方式</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=lab01-git>Lab01 Git
+<a class=anchor href=#lab01-git>#</a></h1><h2 id=实验目的>实验目的
+<a class=anchor href=#%e5%ae%9e%e9%aa%8c%e7%9b%ae%e7%9a%84>#</a></h2><ul><li>了解分布式版本控制系统的概念</li><li>掌握 Git 的基本指令</li><li>实践团队如何使用 Git 进行合作开发</li><li>实践分支合并时冲突的解决</li></ul><h2 id=资源链接>资源链接
+<a class=anchor href=#%e8%b5%84%e6%ba%90%e9%93%be%e6%8e%a5>#</a></h2><p><a href=https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5 target=_blank><a href=https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5>https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5</a></a></p><p>Valid Until: 2022-08-01 23:59</p><h2 id=实验指南>实验指南
+<a class=anchor href=#%e5%ae%9e%e9%aa%8c%e6%8c%87%e5%8d%97>#</a></h2><ol><li>观看上述云盘链接中 Lab01 的视频</li><li>文字教程可查阅
+<a href=/SE-Labs/docs/labs/lab01/git/>Git简易教程</a> 和
+<a href=/SE-Labs/docs/labs/lab01/git_command/>Git指令全集</a></li><li>完成实验作业并于 3.20 日晚 12 点前提交至 <a href=https://scs.buaa.edu.cn/ target=_blank>软院云平台</a></li></ol><h2 id=实验作业>实验作业
+<a class=anchor href=#%e5%ae%9e%e9%aa%8c%e4%bd%9c%e4%b8%9a>#</a></h2><blockquote class="book-hint info">远程仓库可选 Gitee 或 Github；操作过程中请保存好截图，根据后面所讲的提交方式打包提交。</blockquote><h3 id=任务一-个人作业>任务一 个人作业
+<a class=anchor href=#%e4%bb%bb%e5%8a%a1%e4%b8%80-%e4%b8%aa%e4%ba%ba%e4%bd%9c%e4%b8%9a>#</a></h3><ol><li><p>远程仓库上新建代码仓库（private），仓库名：Platform-学号。</p><p><span style=color:red><strong>在仓库主页截图</strong></span></p></li><li><p>远程仓库上以 master/main 分支为基础，新建 dev 分支，添加 <code>index.html</code> 文件。（master/main 分支存储生产环境，dev 分支存储开发环境）</p><p><span style=color:red><strong>在dev分支主页截图</strong></span></p></li><li><p>clone 远程仓库到本地，创建本地 dev 分支与远程同步。（此处结果应为在本地 dev 分支看到 <code>index.html</code> 文件）</p><p><span style=color:red><strong>在控制台和本地目录截图</strong></span></p></li><li><p>在本地修改 <code>index.html</code> 文件（内容如下），上传本地改动到远程仓库。</p><p><span style=color:red><strong>控制台命令、仓库主页查看 index.html 截图</strong></span>
+<details><summary>index.html 文件修改内容</summary><div class=markdown-inner><pre><code>&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;北航软件工程基础&quot;&gt;
+    &lt;title&gt;Lab01 任务一&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Lab01 任务一&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></details></p></li><li><p>在远程修改 <code>index.html</code> 文件（内容如下），本地同步远程改动。</p><p><span style=color:red><strong>本地查看 index.html 内容截图</strong></span>
+<details><summary>index.html 文件修改内容</summary><div class=markdown-inner><pre><code>&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;北航软件工程基础&quot;&gt;
+    &lt;title&gt;Lab01 任务一&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Lab01 任务一&lt;/h1&gt;
+    &lt;h2&gt;姓名&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></details></p></li><li><p>在本地合并 dev 分支到 master/main 分支，提交本地改动到远程仓库，并在远程 master/main 查看 <code>index.html</code> 内容。（以上结果是本地和远程的 master、dev 分支都可以看到 <code>index.html</code> 的最新改动）</p><p><span style=color:red><strong>在网页 master/main 分支查看 index.html 内容并截图</strong></span></p></li></ol><h3 id=任务二-小组作业>任务二 小组作业
+<a class=anchor href=#%e4%bb%bb%e5%8a%a1%e4%ba%8c-%e5%b0%8f%e7%bb%84%e4%bd%9c%e4%b8%9a>#</a></h3><blockquote class="book-hint warning"><p>请保留任务二所创建的仓库一周；</p><p>任务二小组共同完成一份文档，文档模板见所给云盘资源 Lab01。</p></blockquote><h4 id=初始创建与同步>初始创建与同步
+<a class=anchor href=#%e5%88%9d%e5%a7%8b%e5%88%9b%e5%bb%ba%e4%b8%8e%e5%90%8c%e6%ad%a5>#</a></h4><ol><li><p>组长在远程仓库上新建 public 代码仓库，仓库名：Study-组号，并为组员授权。</p><p><span style=color:red><strong>仓库主页截图、仓库授权用户截图</strong></span></p></li><li><p>远程仓库上以 master/main 分支为基础，创建 dev 分支，添加 <code>main.py</code> 文件。</p></li><li><p>各小组成员 clone 远程仓库到本地，创建本地 dev 分支与远程同步。</p></li></ol><h4 id=合并分支练习>合并分支练习
+<a class=anchor href=#%e5%90%88%e5%b9%b6%e5%88%86%e6%94%af%e7%bb%83%e4%b9%a0>#</a></h4><ol start=4><li><p>组长在远程仓库以 dev 分支为基础，为各个组员（包括自己）创建 <code>exercise-学号</code> 分支，各组员创建本地 <code>exercise-学号</code> 分支，同步远程代码仓库，在本地 <code>exercise-学号</code> 分支添加 <code>function_学号.py</code> 文件（各组员在自己的分支修改），上传本地改动至远程仓库。</p><p><span style=color:red><strong>各组员本地 Git 命令行截图和远程仓库各分支文件内容截图</strong></span></p><details><summary><code>function_学号.py</code> 文件修改内容</summary><div class=markdown-inner><pre><code>print('My student_id: 学号')
+</code></pre></div></details></li><li><p>各组员在本地将 <code>exercise-学号</code> 合并到 dev 分支。</p></li><li><p>上传到远程仓库 dev 分支。</p><p><span style=color:red><strong>远程仓库 dev 分支截图</strong></span></p></li></ol><h4 id=合并分支冲突>合并分支冲突
+<a class=anchor href=#%e5%90%88%e5%b9%b6%e5%88%86%e6%94%af%e5%86%b2%e7%aa%81>#</a></h4><ol start=7><li><p>各组员同步远程 dev 分支更新，确保此时内容为最新内容。</p></li><li><p>各组员修改本地 <code>exercise-学号</code> 分支的 <code>main.py</code> 文件。</p><details><summary><code>main.py</code> 文件修改内容</summary><div class=markdown-inner><pre><code>import os
+os.system('python function_学号.py')
+</code></pre></div></details></li><li><p>各组员在本地将 <code>exercise-学号</code> 分支合并到 dev 分支。</p><p><span style=color:red><strong>各组员 Git 命令截图</strong></span></p></li><li><p><strong>等所有组员结束上一步骤后，先组长再组员</strong>依次上传到远程 dev 分支，冲突时一律保留组长的修改。（解决冲突执行 commit 时注明信息为 <code>conflict solved</code>）</p><p><span style=color:red><strong>各组员 Git 命令截图和处理冲突截图</strong></span></p></li></ol><blockquote class="book-hint info">执行第10步骤时，当其他人 push 后你无法直接 push（当然你可以先尝试 push 看有无警告），需要 pull 同步他人修改后才能 push，而此时 pull 下来后你就会发现有冲突了</blockquote><h4 id=完成发布>完成发布
+<a class=anchor href=#%e5%ae%8c%e6%88%90%e5%8f%91%e5%b8%83>#</a></h4><ol start=11><li><p>待第10步骤完成后，组长在本地同步仓库 dev 分支，合并到 master/main 分支，并上传到远程 master/main 分支。</p><p><span style=color:red><strong>组长 Git 命令截图和仓库主页 master/main 分支的 <code>main.py</code> 文件内容</strong></span></p></li></ol><h3 id=提交方式>提交方式
+<a class=anchor href=#%e6%8f%90%e4%ba%a4%e6%96%b9%e5%bc%8f>#</a></h3><ul><li>截止时间：<strong>2022/3/20 晚12点</strong></li><li>提交方式：<a href=https://scs.buaa.edu.cn/ target=_blank>软院云平台</a></li><li>提交内容：两个 word 文档或 pdf 文档，放在压缩包内，命名格式如下</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt><span style=display:flex><span>学号_姓名_第1次实验.zip
+</span></span><span style=display:flex><span>|-- 学号_姓名_第1次实验_任务1.docx/pdf
+</span></span><span style=display:flex><span>`-- 学号_姓名_第1次实验_任务2.docx/pdf
+</span></span></code></pre></div><blockquote class="book-hint warning"><h4 id=注意事项>注意事项
+<a class=anchor href=#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9>#</a></h4><ol><li>文档中必须包括各步骤说明以及相关截图。</li><li>commit 时要求说清楚更改的内容。</li><li>任务二小组共同完成一份文档，组长和组员都需提交，文档模板见所给云盘资源 Lab01。</li></ol></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/commit/726fcd8a899bb2bae9e73de344bd50febcc66f45 title='Last modified by Cloud-Iris | March 7, 2023' target=_blank rel=noopener><img src=/SE-Labs/svg/calendar.svg class=book-icon alt=Calendar>
+<span>March 7, 2023</span></a></div><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/labs/lab01/_index.md target=_blank rel=noopener><img src=/SE-Labs/svg/edit.svg class=book-icon alt=Edit>
+<span>Edit this page</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments><script src=https://utteranc.es/client.js repo=BUAA-GoodBro2021/SE-Labs issue-term=pathname label=Comment theme=github-light crossorigin=anonymous async></script></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#lab01-git>Lab01 Git</a><ul><li><a href=#实验目的>实验目的</a></li><li><a href=#资源链接>资源链接</a></li><li><a href=#实验指南>实验指南</a></li><li><a href=#实验作业>实验作业</a><ul><li><a href=#任务一-个人作业>任务一 个人作业</a></li><li><a href=#任务二-小组作业>任务二 小组作业</a><ul><li><a href=#初始创建与同步>初始创建与同步</a></li><li><a href=#合并分支练习>合并分支练习</a></li><li><a href=#合并分支冲突>合并分支冲突</a></li><li><a href=#完成发布>完成发布</a></li></ul></li><li><a href=#提交方式>提交方式</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
