@@ -1,5 +1,5 @@
 ---
-title: '后端实验指南'
+title: '后端实验指南(敬请期待...)'
 weight: 2003
 ---
 
@@ -13,15 +13,15 @@ weight: 2003
 
 ## 资源链接
 
-<a href="https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5" target="_blank">https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5</a>
+<a href="https://bhpan.buaa.edu.cn:443/link/2B8C3DF0CE32D21908D8007C843940A5" target="_blank">https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B</a>
 
-Valid Until: 2022-08-01 23:59
+Valid Until: 2023-07-15 23:59
 
 ## 实验指南
 
 1. 观看上述云盘链接中 Lab02/后端Django 目录下的视频教程
 2. 文字教程可查阅[Django入门教程](/SE-Labs/docs/labs/lab02/django_door/) 和[Django入土教程](/SE-Labs/docs/labs/lab02/django_earth/)
-3. 完成实验作业并于 3.27 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
+3. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 ## 实验作业
 
@@ -96,13 +96,11 @@ Valid Until: 2022-08-01 23:59
 }
 ```
 
-### 任务五 聪明的你帮助教改改Bug（不强制）
+### 任务五 聪明的你帮助教改改Bug（不强制，写出来说明你是高手！，Zhoues 认可的高手）
 
-背景：Zewan助教看到群里有人说要把“相信你”改为“相信聪明的你”，便用VScode打开网站项目。正要添上“聪明的”这三个字，突然瞥到之前在[Django入门教程](/SE-Labs/docs/labs/lab02/django_door/)写的登录处理函数有点奇怪，便仔细端详了一下。果不其然，发现了bug。
+背景：Zhoues助教看到群里有人说要把“相信你”改为“相信聪明的你”，便用VScode打开网站项目。正要添上“聪明的”这三个字，突然瞥到之前在[Django入门教程](/SE-Labs/docs/labs/lab02/django_door/)写的登录处理函数有点奇怪，便仔细端详了一下。果不其然，发现了bug。
 
-任务：Super2021 聪明的你，请思考一下处理登录请求的完整逻辑，肉眼帮助教找出 `publish/views.py` 中登录函数 `login` 的 Bug，并修改。
-
-> 突发奇想加个任务，一定不是我懒得改了
+任务：聪明的你，请思考一下处理登录请求的完整逻辑，**肉眼**帮助教找出 `publish/views.py` 中登录函数 `login` 的 Bug，并修改。
 
 ### 任务六 实验文档报告（不做要求）
 
@@ -110,7 +108,7 @@ Valid Until: 2022-08-01 23:59
 
 ### 提交方式
 
-- 截止时间：**2022/3/27 晚12点**
+- 截止时间：**2022/3/25 晚12点**
 - 提交方式：<a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 - 提交内容：实现上述任务功能后的项目代码文件夹，和实验报告（如果有的话），命名格式如下：
 
