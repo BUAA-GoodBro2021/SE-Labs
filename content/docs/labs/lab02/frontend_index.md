@@ -1,5 +1,5 @@
 ---
-title: '前端实验指南(敬请期待...)'
+title: '前端实验指南（敬请期待....）'
 weight: 2001
 ---
 
@@ -21,7 +21,7 @@ weight: 2001
 ## 实验指南
 
 1. 查看资源链接中的**前端入门基础.mp4**、**前端入门基础.pdf**
-2. 完成实验作业并于 3.27 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
+2. 完成实验作业并于 3.18 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 
 
