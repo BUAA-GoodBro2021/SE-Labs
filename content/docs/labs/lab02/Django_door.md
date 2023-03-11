@@ -13,7 +13,11 @@ weight: 2004
 
 ## 环境配置
 
-相比于直接安装 Python 某个版本，更推荐安装 <a href="https://www.anaconda.com/" target="_blank">Anaconda</a> 管理虚拟环境。Python 项目的版本和依赖各有千秋，而使用 Anaconda 能针对项目建立虚拟环境，互不干扰且便于管理。
+我们可以考虑一个小的问题，现在有不同的项目需要在同一个服务器上运行，项目一需要 Python >= 3.8 的环境，因为其中有一个核心的算法模型只支持 3.8 及其以上的 Python 版本，而项目二需要 Python <= 3.7 的环境，因为其中有一个拓展包并没有随着 Python 版本的更新而进行维护，导致 Python 3.7 及其以上的环境不支持该拓展包的使用，那么我们该怎么处理呢。一个很自然的想法就是，我们对于不同的项目，单独给其配置环境就可以了，将两个项目的环境区别开来，互不影响，这样就可以在同一个服务器上进行不同项目的部署了。
+
+给不同项目单独配置的环境叫做**虚拟环境**，管理虚拟环境的工具叫做 Conda，Conda的种类有很多，比如Anaconda，miniconda等等，上面这两个 Conda 是常用的 Conda，二者区别在于Anaconda自带了很多数据科学计算的包（该虚拟环境已经安装好了比如 NumPy，Panda等包），而miniconda则是一个空的环境。
+
+相比于直接安装 Python 某个版本，我们更推荐安装 <a href="https://www.anaconda.com/" target="_blank">Anaconda</a> 管理虚拟环境（miniconda 也可以，这里以 Anaconda 作为例子）。Python 项目的版本和依赖各有千秋，而使用 Anaconda 能针对项目建立虚拟环境，互不干扰且便于管理。
 
 Anaconda下载地址：
 - 官网：<a href="https://www.anaconda.com/" target="_blank">https://www.anaconda.com/</a>
