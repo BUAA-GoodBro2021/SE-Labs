@@ -1,5 +1,5 @@
 ---
-title: 'Django入门篇'
+title: 'Django入门篇（敬请期待....）'
 weight: 2004
 ---
 
