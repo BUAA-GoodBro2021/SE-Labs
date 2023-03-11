@@ -1,5 +1,5 @@
 ---
-title: 'Django入土篇'
+title: 'Django入土篇(敬请期待...)'
 weight: 2005
 ---
 
