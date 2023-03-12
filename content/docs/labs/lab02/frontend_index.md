@@ -26,10 +26,14 @@ Valid Until: 2023-07-15 23:59
 1. 查看资源链接中的**前端入门基础.mp4**、**前端入门基础.pdf**
 2. 学习JS可以参考链接中的三本电子书，网页版可以参考<a href="https://zh.javascript.info/" target="_blank">现代JavaScript教程</a>
 3. 推荐使用Chrome浏览器进行开发，调试技巧可以参考<a href="https://www.frontendwingman.com/Chrome/" target="_blank">Chrome DevTools使用技巧</a>
-4. 在前端的学习和开发过程中，建议你时常参考<a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>
+4. 在前端的学习和开发过程中，建议你时常参考<a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>，这是前端开发的百科全书
 5. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
+{{< hint info >}}
+很多同学认为前端开发就是框架 + 组件库 + 搜索引擎。
 
+熟悉框架语法并从组件库进行CV固然可以快速完成需求，但软工一作为一系列软件工程开发的开端，作为助教，我还是希望同学们能在这几个月的学习过程中打好JS和CSS的基础，增加自己日后面对复杂需求时的底气，勿以浮沙筑高台。
+{{< /hint >}}
 
 ## 实验作业
 
@@ -109,7 +113,9 @@ Valid Until: 2023-07-15 23:59
 
   ![hover2](/SE-Labs/images/lab2/hover2.png)
   {{< hint info >}}
-  参考思路：可以通过`document.querySelectorAll`设置筛选条件得到NodeList，遍历时通过`className`属性来**设置元素类名**。
+  对于这个任务，希望同学们遵循各司其职原则，即尽可能少用JS来干扰CSS/HTML。
+
+  例如，更改元素的className就优于对style直接进行更改。
   {{< /hint >}}
 
 ## 实验报告

@@ -151,12 +151,12 @@ p {
 
 ```css
 body, a{
-    overflow-x: overlay;
-    padding: 0 !important;
+    overflow-x: overlay;
+    padding: 0 !important;
 }
 
 .hide_scroll{
-    overflow: hidden !important;
+    overflow: hidden !important;
 }
 ```
 
@@ -184,19 +184,19 @@ body, a{
 ## JavaScript 毒瘤：==
 
 ```js
-'' == '0'               // false
-0 == ''                 // true
-0 == '0'                // true
+'' == '0'               // false
+0 == ''                 // true
+0 == '0'                // true
 
-false == 'false'        // false
-false == 0              // true
-null == undefined       // true
+false == 'false'        // false
+false == 0              // true
+null == undefined       // true
 
-'\n' == 0               // true
-'\t' == 0               // true
-'\r\n' == 0             // true
+'\n' == 0               // true
+'\t' == 0               // true
+'\r\n' == 0             // true
 
-0.1 + 0.2 == 0.3        // false
+0.1 + 0.2 == 0.3        // false
 ```
 
 ## JavaScript 对象、函数
@@ -260,7 +260,7 @@ arr[1];
 arr.push(0.6);
 arr.indexOf(1);
 arr.sort(function(a, b) {
-    return a – b;
+    return a  - b;
 });
 arr = arr.concat([2, 3]);
 arr.length;
