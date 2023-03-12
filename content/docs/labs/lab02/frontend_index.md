@@ -21,7 +21,10 @@ weight: 2001
 ## 实验指南
 
 1. 查看资源链接中的**前端入门基础.mp4**、**前端入门基础.pdf**
-2. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
+2. 学习JS可以参考链接中的三本电子书，网页版可以参考<a href="https://zh.javascript.info/" target="_blank">现代JavaScript教程</a>
+3. 推荐使用Chrome浏览器进行开发，调试技巧可以参考<a href="https://www.frontendwingman.com/Chrome/" target="_blank">Chrome DevTools使用技巧</a>
+4. 在前端的学习和开发过程中，建议你随时参考<a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>
+5. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 
 
@@ -56,7 +59,7 @@ weight: 2001
 
 ### 任务3
 
-修改index.html，使**热榜**部分的样式其尽可能与下方相似，相关的图片放在了img文件下，其中把“《你的学号》”换成你真实的学号（例如20370000），如有必要可以注释原有的代码，但不要删除，因为后续的任务还会用到
+修改index.html，使**热榜**部分的样式其尽可能与下方相似，相关的图片放在了img文件下，其中把“《你的学号》”换成你真实的学号（例如21373000），如有必要可以注释原有的代码，但不要删除，因为后续的任务还会用到
 
 ![image-20220321085947597](/SE-Labs/images/lab2/image-20220321085947597.png)
 
@@ -88,12 +91,21 @@ weight: 2001
 
 - 在任务2 的基础上，使用户在搜索框按下回车的时候也可以进行搜索，并且会跳转到百度对应的搜索页面（处理键盘事件，链接外部页面）
 
-- 在任务3的基础上加上醒目的大图，尽可能与下图相似（处理相对位置，没有思路可以去百度榜单F12看看他是怎么写的）
+- 在任务3的基础上加上醒目的大图，尽可能与下图相似
 
   ![image-20220321090301004](/SE-Labs/images/lab2/image-20220321090301004.png)
-{{< hint info >}}
-里面最显眼的那张图片并**不是**一个正方形哦，是一个圆角矩形，而且你可以发现我们所提供的原图是**没有左上角的1标志**，请思考如何引入
-{{< /hint >}}
+  {{< hint info >}}
+  里面最显眼的那张图片并**不是**一个正方形哦，是一个圆角矩形，而且你可以发现我们所提供的原图是**没有左上角的1标志**，请思考如何引入
+  {{< /hint >}}
+
+- 观察index.html，可以发现左上方的`<a>`标签中`href`中使用了http和https两种不同的协议，修改附件中的源文件index.js和style.css，使得鼠标悬停在`href`中使用http协议的`<a>`标签上时标签内容为红色
+
+  ![hover](/SE-Labs/images/lab2/hover.png)
+
+  ![hover2](/SE-Labs/images/lab2/hover2.png)
+  {{< hint info >}}
+  可以通过`document.querySelectorAll`设置筛选条件得到NodeList，遍历时通过`className`属性来**设置元素类名**。
+  {{< /hint >}}
 
 ## 实验报告
 
