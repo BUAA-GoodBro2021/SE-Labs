@@ -1,5 +1,5 @@
 ---
-title: '前端实验指南（敬请期待....）'
+title: '前端实验指南'
 weight: 2001
 ---
 
@@ -17,13 +17,16 @@ weight: 2001
 
 ## 资源链接
 
+https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B
+
+Valid Until: 2023-07-15 23:59
 
 ## 实验指南
 
 1. 查看资源链接中的**前端入门基础.mp4**、**前端入门基础.pdf**
 2. 学习JS可以参考链接中的三本电子书，网页版可以参考<a href="https://zh.javascript.info/" target="_blank">现代JavaScript教程</a>
 3. 推荐使用Chrome浏览器进行开发，调试技巧可以参考<a href="https://www.frontendwingman.com/Chrome/" target="_blank">Chrome DevTools使用技巧</a>
-4. 在前端的学习和开发过程中，建议你随时参考<a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>
+4. 在前端的学习和开发过程中，建议你时常参考<a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>
 5. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 
@@ -32,7 +35,7 @@ weight: 2001
 
 你可以在所给资源的homework文件夹中找到实验文档并填写
 {{< hint info >}}
-本次实验建议使用Live Server拓展，我们可以在项目中将其作为一个服务器实时查看开发的网页或项目效果。
+本次实验建议使用Live Server拓展，我们可以在项目中将其作为一个服务器实时查看所开发的项目的效果。
 
 安装拓展后，对index.html右键选择Open with Live Server开启服务。
 
@@ -79,6 +82,8 @@ weight: 2001
 
 <span style="color: red">点击后审查页面变化截图</span>
 
+<span style="color: red">解释出现错误的原因</span>
+
 <span style="color: red">修复后登录截图</span>
 
 ### 任务6
@@ -98,13 +103,13 @@ weight: 2001
   里面最显眼的那张图片并**不是**一个正方形哦，是一个圆角矩形，而且你可以发现我们所提供的原图是**没有左上角的1标志**，请思考如何引入
   {{< /hint >}}
 
-- 观察index.html，可以发现左上方的`<a>`标签中`href`中使用了http和https两种不同的协议，修改附件中的源文件index.js和style.css，使得鼠标悬停在`href`中使用http协议的`<a>`标签上时标签内容为红色
+- 观察index.html，可以发现左上方的`<a>`标签的`href`特性中使用了http和https两种不同的协议，修改附件中的index.js和style.css，使得鼠标悬停在使用http协议的`<a>`标签上时标签内容为红色
 
   ![hover](/SE-Labs/images/lab2/hover.png)
 
   ![hover2](/SE-Labs/images/lab2/hover2.png)
   {{< hint info >}}
-  可以通过`document.querySelectorAll`设置筛选条件得到NodeList，遍历时通过`className`属性来**设置元素类名**。
+  参考思路：可以通过`document.querySelectorAll`设置筛选条件得到NodeList，遍历时通过`className`属性来**设置元素类名**。
   {{< /hint >}}
 
 ## 实验报告
