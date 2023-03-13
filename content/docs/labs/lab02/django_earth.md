@@ -107,7 +107,7 @@ Book.objects.filter(author__contains='吕') # 查询姓吕的作者编写的书
 2. 大小关系 __gt __gte __lt __lte
 Book.objects.filter(price__gt=30.0, author__contains='吕') # 查询售价大于30元的，且是姓吕的作者编写的书 (filter中由多个查询条件为'与'的关系)
 3. 存在关系 __in
-Book.objects.filter(author__in = ['吕云翔','周恩申'，'李昊'，'闫思桥']) 
+Book.objects.filter(author__in = ['吕云翔','周恩申','李昊','闫思桥']) 
 4. 范围 __range
 Book.objects.filter(id__range=(35,50))
 

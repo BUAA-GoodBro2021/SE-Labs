@@ -1,5 +1,5 @@
 ---
-title: '后端实验指南(敬请期待...)'
+title: '后端实验指南'
 weight: 2003
 ---
 
@@ -9,7 +9,7 @@ weight: 2003
 
 - 掌握 Python 基础代码
 - 了解 Django 框架，学习使用框架编写几个简单 API
-- 学习使用 Postman 请求工具测试后端 API
+- 学习使用 Postman/ApiFox 请求工具测试后端 API
 
 ## 资源链接
 
