@@ -32,6 +32,10 @@ Anaconda下载地址：
 
 安装 Anaconda 后，使用 conda 指令新建一个虚拟环境，用于开发 Django 项目：
 
+注意：**请不要创建 python 大等于 3.10 的环境**，因为python的版本需要和 Django 的版本需要适配，目前常用的版本是 Django=4.x.x，其主要支持的 python 版本为 3.9。如果创建3.10 以上的版本在接下来的迁移数据库的实验操作中会遇到下面的报错，提示版本不兼容。
+
+> django.db.utils.NotSupportedError: deterministic=True requires SQLite 3.8.3 or higher
+
 ```shell
 conda create --name django python=3.9   # 虚拟环境名为django，python版本指定3.9
 ```
@@ -244,25 +248,27 @@ python manage.py makemigrations # 生成迁移文件
 python manage.py migrate        # 迁移数据库模型
 ```
 
-> 上面这两条指令比较难记住，助教给大家提供了一个脚本，只需要运行该脚本直接执行上述两条指令并同时启动  Django 服务。在与 manage.py 的同级目录下创建 run.py 文件，将该代码复制粘贴至 run.py ，然后使用 python run.py 即可完成三条核心指令的运行。
+> 这里如果遇到报错 django.db.utils.NotSupportedError: deterministic=True requires SQLite 3.8.3 or higher 说明目前你的环境不支持直接使用 django 自己生成的 db.sqlite 数据库文件，这一点也不用担心，我们可以**在settings.py中配置其他数据库（比如MySQL）**，有关如何配置 MySQL数据库可见 [sqlite 数据库可视化](/SE-Labs/docs/labs/lab02/django_door/#sqlite-数据库可视化)。这里并没有配置 settings.py 中数据库的使用方式，因此迁移数据库的时候默认直接创建 db.sqlite，此时同学们遇到上述报错那就没有办法只能配置 MySQL再完成后续的操作了。
+
+>上面这两条指令比较难记住，助教给大家提供了一个脚本，只需要运行该脚本直接执行上述两条指令并同时启动  Django 服务。在与 manage.py 的同级目录下创建 run.py 文件，将该代码复制粘贴至 run.py ，然后使用 python run.py 即可完成三条核心指令的运行。
 >
-> ```python
-> import os
-> import platform
-> 
-> os.system("python manage.py makemigrations")
-> os.system("python manage.py migrate")
-> 
-> if platform.system() != "Linux":
->     os.system("python manage.py runserver")
->     # 本地环境，直接运行
-> else:
->     os.system("python manage.py runserver 0.0.0.0:8000 > log.txt & \n")
->     print("The backend is running!")
->     # 服务器环境，后台运行
-> ```
+>```python
+>import os
+>import platform
 >
-> 但是实际上在 Linux 服务器上运行的时候，我们一般不采用runserver进行启动，而是采用之前我们提到的 wsgi.py 来运行 uwsgi 配合 nginx 完成启动，因为 runserver 启动的服务不支持 HTTPS 的通信，并发能力也不足，无法**配合 nginx 完成反向代理和负载均衡**。这些名词大家不懂也没有关系，在之后的部署实验章节会和大家介绍这些，目前我们都采用 runserver 启动即可。
+>os.system("python manage.py makemigrations")
+>os.system("python manage.py migrate")
+>
+>if platform.system() != "Linux":
+>os.system("python manage.py runserver")
+># 本地环境，直接运行
+>else:
+>os.system("python manage.py runserver 0.0.0.0:8000 > log.txt & \n")
+>print("The backend is running!")
+># 服务器环境，后台运行
+>```
+>
+>但是实际上在 Linux 服务器上运行的时候，我们一般不采用runserver进行启动，而是采用之前我们提到的 wsgi.py 来运行 uwsgi 配合 nginx 完成启动，因为 runserver 启动的服务不支持 HTTPS 的通信，并发能力也不足，无法**配合 nginx 完成反向代理和负载均衡**。这些名词大家不懂也没有关系，在之后的部署实验章节会和大家介绍这些，目前我们都采用 runserver 启动即可。
 
 输入上述命令迁移后运行，可以发现在项目根目录出现了 `db.sqlite3` 文件。这是一个数据库文件，如何可视化请见后面 [sqlite 数据库可视化](/SE-Labs/docs/labs/lab02/django_door/#sqlite-数据库可视化)，你也可以先看可视化部分再回头。
 
@@ -548,6 +554,8 @@ urlpatterns = [
 
 ## sqlite 数据库可视化
 
+### Pycharm 可视化数据库
+
 这里只展示 Pycharm 如何可视化 `db.sqlite3` 文件。
 
 在 Pycharm 右侧侧边栏处，点击 Database 按钮，添加 Data Source：
@@ -564,7 +572,24 @@ urlpatterns = [
 
 
 
-但是实际上上我们更多的还是采用自己的云数据库，那么如何创建云数据库然后采用 DataGrip 来可视化我们的数据库呢，详见 Django入土篇！
+### DataGrip 可视化数据库
+
+我们还可以采用 DataGrip 进行数据库可视化，该软件其实也是 JB 旗下的一个软件（Pycharm 也是 JB 旗下的），因此其可视化效果和连接数据库的方式与上述的 Pycharm 的可视化差不太多。具体 DataGrip 的下载还有连接数据库可以参考如下连接：
+
+- 安装 DataGrip: [Datagrip 基本使用 · Django Book](https://super-buaa-2021.github.io/Djangobook/post/ch1/4.html)
+- 使用 DataGrip：[应用创建与数据库初始化 · Django Book ](https://super-buaa-2021.github.io/Djangobook/post/ch1/5.html)
+
+
+
+### 使用 MySQL
+
+但是实际上如果我们的网站打算部署在云端大家都可以通过公网IP进行访问（**软工一不要求项目进行部署**），我们更多的还是采用自己的**云数据库**，那么如何使用云数据库（以MySQL为例）呢 ？
+
+首先我们得需要一个云数据库，这个云数据库可以安装在自己的具有公网IP的服务器内（网上有大量教程教大家如何在自己的服务器中安装云数据库），也可以自行购买云数据库，个人推荐后者。
+
+下面介绍如何自行购买云数据库，如果已经有云数据库的同学可以跳过这个部分
+
+
 
 
 
