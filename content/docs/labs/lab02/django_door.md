@@ -574,24 +574,86 @@ urlpatterns = [
 
 ### DataGrip 可视化数据库
 
-我们还可以采用 DataGrip 进行数据库可视化，该软件其实也是 JB 旗下的一个软件（Pycharm 也是 JB 旗下的），因此其可视化效果和连接数据库的方式与上述的 Pycharm 的可视化差不太多。具体 DataGrip 的下载还有连接数据库可以参考如下连接：
+如果你使用的是 vscode 来完成项目的搭建和编写，我们还可以采用 DataGrip 进行数据库可视化，该软件其实也是 JB 旗下的一个软件（Pycharm 也是 JB 旗下的），因此其可视化效果和连接数据库的方式与上述的 Pycharm 的可视化差不太多。具体 DataGrip 的下载还有连接数据库可以参考如下连接：
 
 - 安装 DataGrip: [Datagrip 基本使用 · Django Book](https://super-buaa-2021.github.io/Djangobook/post/ch1/4.html)
 - 使用 DataGrip：[应用创建与数据库初始化 · Django Book ](https://super-buaa-2021.github.io/Djangobook/post/ch1/5.html)
 
 
 
-### 使用 MySQL
+### 使用 MySQL（拓展内容）
 
-但是实际上如果我们的网站打算部署在云端大家都可以通过公网IP进行访问（**软工一不要求项目进行部署**），我们更多的还是采用自己的**云数据库**，那么如何使用云数据库（以MySQL为例）呢 ？
+实际上我们并不是经常使用 db.sqlite这个 Django 自己生成的数据库文件，因为这个数据库文件安全性不足，无法像MySQL一般有数据备份等安全性操作，而且面对需要存储大量数据的场景的时候db.sqlite 无法优秀的完成任务，因此在实际的开发场景我们经常常用 MySQL 等常用的关系性数据库。
 
-首先我们得需要一个云数据库，这个云数据库可以安装在自己的具有公网IP的服务器内（网上有大量教程教大家如何在自己的服务器中安装云数据库），也可以自行购买云数据库，个人推荐后者。
+Django 使用 MySQL 需要有两步操作：
 
-下面介绍如何自行购买云数据库，如果已经有云数据库的同学可以跳过这个部分
+1. 在 settings.py 同级目录下的 \__init__.py 中加入如下代码，如果环境内没有 pymysql 的需要使用 pip 进行安装：`pip install pymysql`
 
+   ```python
+   import pymysql
+   pymysql.install_as_MySQLdb()
+   ```
 
+2. 在settings.py 中的 DATABASES 需要改成如下结构：
 
+   ```python
+   DATABASES = {
+       'default': {
+           'ENGINE': mysql_ENGINE,
+           'NAME': mysql_NAME,
+           'USER': mysql_USER,
+           'PASSWORD': mysql_PASSWORD,
+           'HOST': mysql_HOST,
+           'PORT': mysql_PORT,
+       }
+   }
+   ```
 
+   其中上面的各个变量的值为
+
+   ```python
+   # MySQL数据库配置
+   mysql_ENGINE = 'django.db.backends.mysql'	# 这个不需要修改
+   mysql_NAME = ''								# 这个自己创建的数据库的名称
+   mysql_USER = ''								# 数据库的账户，如果是本地的数据库一般为 root
+   mysql_PASSWORD = ''							# 数据库账户对应的密码
+   mysql_HOST = 'rm-wz974lh9hz3g6w0k5ko.mysql.rds.aliyuncs.com'	# 一般购买的云数据库对应路由和这个很类似，这是阿里云数据库的路由，
+   																# 如果是本地的mysql一般默认为 127.0.0.1
+       															# 如果是自己的服务器安装的mysql一般默认为服务器的公网IP
+   mysql_PORT = '3306'	# 这个除非自己特别设置过，否则本地mysql和购买的云数据库端口都是默认3306，当然如果是自己在服务器上安装的mysql可以修改端口，						# 但是务必保证该端口对应的防火墙是打开的
+   ```
+
+   
+
+上面的配置文件我们发现了其实有三类的MySQL数据库，一类是本地自己在本机安装的，一类是自己在自己的服务器上安装的，还有一类是购买的云数据库。如果想使用 MySQL数据库，**个人推荐后两者**。不推荐本地 MySQL 的原因有很多，比如安装在电脑中占比较大的存储空间，同时MySQL经常半夜更新突然弹一个弹窗出来真的要吓死人，又比如本地的 MySQL 只有自己才可以访问，队友访问不了.....   虽然**软工一不要求项目进行部署**，但是后端同学没有使用同一个数据库来保证数据的一致性，有可能导致后端之间甚至前后端之间的协作出很多问题。
+
+#### 本地数据库/自己的服务器安装mysql数据库
+
+这两种情况其实都是自己起安装数据库，网上有很多教程，当然Zhoues也考虑到了后端同学可能没有自己的服务器，因此这里提供一个购买云服务器的教程
+
+- 购买云服务器：[腾讯云服务器购买与配置 · Django Book](https://super-buaa-2021.github.io/Djangobook/post/ch2/1.html)
+
+购买了云服务器之后，直接在服务器上配置MySQL即可，这里有一点需要注意，MySQL会默认占用3306的端口，因此购买的服务器需要将3306端口对应的防火墙打开，不然的话无法连接。
+
+#### 购买云数据库
+
+Django Book中购买云数据库的章节是缺失的，这里补上该章节
+
+**注意：现在阿里云数据库很贵，建议去腾讯云的[学生优惠购买](https://cloud.tencent.com/act/campus?from=19070)**
+
+![sqlite3](/SE-Labs/images/lab2/mysql.png)
+
+购买云数据库之后，我们可以按照其新手教程完成创建数据库用户及其密码，创建具体数据库等等操作，然后最关键的就是获得上文提到的 mysql_HOST，我们可以在我们的云管理平台的有关数据库连接部分选择外网（公网）IP地址即可。下面是阿里云数据库的外网IP地址获取，别问为什么不是腾讯云是因为Zhoues之前购买的是阿里云数据库
+
+![sqlite3](/SE-Labs/images/lab2/mysql2.png)
+
+#### 使用数据可视化工具连接MySQL
+
+ 我们创建好数据库，并使用 Django 配置完数据库之后，我们需要完成MySQL的可视化工具连接，这里以 DataGrip举例（Pycharm一样）：
+
+![sqlite3](/SE-Labs/images/lab2/mysql3.png)
+
+只需要将 Django 的配置信息填到这里即可，注意上面的图并没有指定查看哪个数据库，而是查看所有数据库，如果想具体查看某一个数据库可以在URL上方的数据库上填上数据库的名称即可。
 
 ## Postman 测试
 
