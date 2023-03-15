@@ -662,6 +662,10 @@ Django Book中购买云数据库的章节是缺失的，这里补上该章节
 
 ![sqlite3](/SE-Labs/images/lab2/mysq7.png)
 
+阿里云数据库公网IP获取则是在这个页面获取得到
+
+![sqlite3](/SE-Labs/images/lab2/mysql2.png)
+
 #### 使用数据可视化工具连接MySQL
 
  我们创建好数据库，并使用 Django 配置完数据库之后，我们需要完成MySQL的可视化工具连接，这里以 DataGrip举例（Pycharm一样）：
