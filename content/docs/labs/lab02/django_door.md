@@ -644,9 +644,23 @@ Django Book中购买云数据库的章节是缺失的，这里补上该章节
 
 ![sqlite3](/SE-Labs/images/lab2/mysql.png)
 
-购买云数据库之后，我们可以按照其新手教程完成创建数据库用户及其密码，创建具体数据库等等操作，然后最关键的就是获得上文提到的 mysql_HOST，我们可以在我们的云管理平台的有关数据库连接部分选择外网（公网）IP地址即可。下面是阿里云数据库的外网IP地址获取，别问为什么不是腾讯云是因为Zhoues之前购买的是阿里云数据库
+购买云数据库之后，我们可以按照其新手教程完成创建数据库用户及其密码，创建具体数据库等等操作，然后最关键的就是获得上文提到的 mysql_HOST，我们可以在我们的云管理平台的有关数据库连接部分选择外网（公网）IP地址即可。
 
-![sqlite3](/SE-Labs/images/lab2/mysql2.png)
+创建数据库
+
+![sqlite3](/SE-Labs/images/lab2/mysq6.png)
+
+开启公网IP
+
+![sqlite3](/SE-Labs/images/lab2/mysq4.png)
+
+正在开启
+
+![sqlite3](/SE-Labs/images/lab2/mysq5.png)
+
+开启之后这个页面就有公网IP了，就可以使用DataGrip连接了
+
+![sqlite3](/SE-Labs/images/lab2/mysq7.png)
 
 #### 使用数据可视化工具连接MySQL
 
