@@ -648,19 +648,19 @@ Django Book中购买云数据库的章节是缺失的，这里补上该章节
 
 创建数据库
 
-![sqlite3](/SE-Labs/images/lab2/mysq6.png)
+![sqlite3](/SE-Labs/images/lab2/mysql6.png)
 
 开启公网IP
 
-![sqlite3](/SE-Labs/images/lab2/mysq4.png)
+![sqlite3](/SE-Labs/images/lab2/mysql4.png)
 
 正在开启
 
-![sqlite3](/SE-Labs/images/lab2/mysq5.png)
+![sqlite3](/SE-Labs/images/lab2/mysql5.png)
 
 开启之后这个页面就有公网IP了，就可以使用DataGrip连接了
 
-![sqlite3](/SE-Labs/images/lab2/mysq7.png)
+![sqlite3](/SE-Labs/images/lab2/mysql7.png)
 
 阿里云数据库公网IP获取则是在这个页面获取得到
 
