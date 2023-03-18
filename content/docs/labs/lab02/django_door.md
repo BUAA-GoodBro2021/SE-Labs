@@ -577,7 +577,7 @@ urlpatterns = [
 
 
 
-### 使用 MySQL（拓展内容）
+### 使用 MySQL<span style="color: red">（拓展内容）</span>
 
 实际上我们并不是经常使用 db.sqlite这个 Django 自己生成的数据库文件，因为这个数据库文件安全性不足，无法像MySQL一般有数据备份等安全性操作，而且面对需要存储大量数据的场景的时候db.sqlite 无法优秀的完成任务，因此在实际的开发场景我们经常常用 MySQL 等常用的关系性数据库。
 
