@@ -32,10 +32,6 @@ Anaconda下载地址：
 
 安装 Anaconda 后，使用 conda 指令新建一个虚拟环境，用于开发 Django 项目：
 
-注意：**请不要创建 python 大等于 3.10 的环境**，因为python的版本需要和 Django 的版本需要适配，目前常用的版本是 Django=4.x.x，其主要支持的 python 版本为 3.9。如果创建3.10 以上的版本在接下来的迁移数据库的实验操作中会遇到下面的报错，提示版本不兼容。
-
-> django.db.utils.NotSupportedError: deterministic=True requires SQLite 3.8.3 or higher
-
 ```shell
 conda create --name django python=3.9   # 虚拟环境名为django，python版本指定3.9
 ```
