@@ -48,9 +48,9 @@ Valid Until: 2023-07-15 23:59
 
 ### 任务3
 
-增加个人信息查询功能（localhost:8090/show_info），并使用 Postman 测试（在 body 中返回“name”：“xxx”， “password”： “xxx”），请提供运行**截图**
+增加个人信息查询功能（localhost:8090/show_info），并使用 Postman/ApiFox 测试（在 body 中返回“name”：“xxx”， “password”： “xxx”），请提供运行**截图**
 
-写一份实验报告，简要说明任务 1 的完成过程，以及在任务 2 和任务 3 中使用 Postman 测试情况截图（测试数据和结果），最好附上你的心得
+写一份实验报告，简要说明任务 1 的完成过程，以及在任务 2 和任务 3 中使用 Postman/ApiFox 测试情况截图（测试数据和结果），最好附上你的心得
 
 {{< hint info >}}
 
