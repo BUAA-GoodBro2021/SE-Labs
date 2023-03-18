@@ -107,6 +107,12 @@ VSCode中的代码片段功能非常实用，可以在设置中搜索 `snippets`
 
 点击登录按钮后，似乎用户已经正确地登录，但是页面似乎发生了一些错误。请尝试修改 `initUserInfo` 函数，使得用户登录后，页面显示依然正常。（使用审查元素分析网页变化）
 
+{{< hint info >}}
+作为开发者，不能信任任何用户可以编辑的内容，防止<a href="https://juejin.cn/post/6844903685122703367" target="_blank">XSS攻击</a>
+
+对于本任务来说，我们不允许用户输入任意的 HTML 代码 ( `innerHTML` ) ，而是只允许用户输入纯文本 ( `textContent` )
+{{< /hint >}}
+
 <span style="color: red">点击后审查页面变化截图</span>
 
 <span style="color: red">解释出现错误的原因</span>
