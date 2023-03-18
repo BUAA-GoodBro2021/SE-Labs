@@ -1,5 +1,5 @@
 ---
-title: 'Django入门篇（修订中...）'
+title: 'Django入门篇'
 weight: 2004
 ---
 
