@@ -119,6 +119,18 @@ VSCode中的代码片段功能非常实用，可以在设置中搜索 `snippets`
 
 <span style="color: red">修复后登录截图</span>
 
+{{< hint info >}}
+
+修复后截图可以参考下面两个版本，只需实现一种效果即可
+
+- 简单版
+
+  ![answer2](/SE-Labs/images/lab2/answer2.png)
+
+- 进阶版
+
+  ![answer1](/SE-Labs/images/lab2/answer1.png)
+{{< /hint >}}
 ### 任务 6
 
 将你的代码提交至远程仓库，github 或者 gitee 均可（至少保留 1 周），并在实验文档中说明
