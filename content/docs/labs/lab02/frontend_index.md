@@ -1,5 +1,5 @@
 ---
-title: '前端实验指南'
+title: "前端实验指南"
 weight: 2001
 ---
 
@@ -24,8 +24,8 @@ Valid Until: 2023-07-15 23:59
 ## 实验指南
 
 1. 查看资源链接中的 **前端入门基础.mp4**、**前端入门基础.pdf**
-2. 学习JS可以参考链接中的三本电子书，网页版可以参考 <a href="https://zh.javascript.info/" target="_blank">现代JavaScript教程</a>
-3. 推荐使用Chrome浏览器进行开发，调试技巧可以参考 <a href="https://www.frontendwingman.com/Chrome/" target="_blank">Chrome DevTools使用技巧 </a>
+2. 学习 JS 可以参考链接中的三本电子书，网页版可以参考 <a href="https://zh.javascript.info/" target="_blank">现代 JavaScript 教程</a>
+3. 推荐使用 Chrome 浏览器进行开发，调试技巧可以参考 <a href="https://www.frontendwingman.com/Chrome/" target="_blank">Chrome DevTools 使用技巧 </a>
 4. 在前端的学习和开发过程中，建议你时常参考 <a href="https://developer.mozilla.org/zh-CN/" target="_blank">✨✨MDN Web Docs✨✨</a>，这是前端开发的百科全书
 5. 完成实验作业并于 3.25 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
@@ -46,15 +46,36 @@ Valid Until: 2023-07-15 23:59
 安装拓展后，对 `index.html` 右键选择 `Open with Live Server` 开启服务。
 
 ![Live Server](/SE-Labs/images/lab2/LiveServer.png)
+
 {{< /hint >}}
 
-### 任务1
+{{< hint info >}}
+VSCode 中有很多好用的前端拓展，在这里进行简单推荐：
+
+- Auto Close Tag : 自动闭合标签
+- Auto Rename Tag : 自动重命名标签
+- gitLens : 增强 git 版本控制
+- open in browser : 在浏览器中打开当前文件
+- Project Manager : 项目管理
+- Prettier : 代码格式化
+
+对于Vue开发者，推荐安装： Volar 
+
+对于React开发者，推荐安装： ES7+ React/Redux/React-Native/JS snippets 
+
+
+VSCode中的代码片段功能非常实用，可以在设置中搜索 `snippets` 进行配置，细节可以参考 <a href="https://juejin.cn/post/6844903869424599053" target="_blank">VSCode代码片段配置</a>
+
+我们可以使用这个工具来方便地编写 JSON 配置文件： <a href="https://snippet-generator.app/" target="_blank">VSCode代码片段生成器</a>
+{{< /hint >}}
+
+### 任务 1
 
 资源中的 `homework` 文件夹给出了一个模仿百度主页的网页（`index.html`），可是这个网页缺少了 CSS 和 JS 文件，你需要把附件文件夹中的 CSS 和 JS 代码引入到网页中
 
 <span style="color: red">完成该环节的之后的网页截图</span>
 
-### 任务2
+### 任务 2
 
 修改附件中的 `index.js`，使得点击搜索按钮后，浏览器会弹窗显示所搜索的内容。但是当搜索框为空的时候，点击搜索按钮后，浏览器会弹窗显示“请输入搜索内容”
 
@@ -66,7 +87,7 @@ Valid Until: 2023-07-15 23:59
 
 <span style="color: red">再次点击后的截图</span>
 
-### 任务3
+### 任务 3
 
 修改 `index.html`，使 **热榜** 部分的样式其尽可能与下方相似，相关的图片放在了 `img` 文件夹下，其中把“《你的学号》”换成你真实的学号（例如 `21373000`），如有必要可以注释原有的代码，但不要删除，因为后续的任务还会用到
 
@@ -74,7 +95,7 @@ Valid Until: 2023-07-15 23:59
 
 <span style="color: red">修改完的网页截图</span>
 
-### 任务4
+### 任务 4
 
 修改 index.js，使得在点击 ID 为 top-right 的元素之后，会调用 clickLogin 函数
 
@@ -82,9 +103,15 @@ Valid Until: 2023-07-15 23:59
 
 <span style="color: red">点击后的截图</span>
 
-### 任务5
+### 任务 5
 
 点击登录按钮后，似乎用户已经正确地登录，但是页面似乎发生了一些错误。请尝试修改 `initUserInfo` 函数，使得用户登录后，页面显示依然正常。（使用审查元素分析网页变化）
+
+{{< hint info >}}
+作为开发者，不能信任任何用户可以编辑的内容，防止<a href="https://juejin.cn/post/6844903685122703367" target="_blank">XSS攻击</a>
+
+对于本任务来说，我们不允许用户输入任意的 HTML 代码 ( `innerHTML` ) ，而是只允许用户输入纯文本 ( `textContent` )
+{{< /hint >}}
 
 <span style="color: red">点击后审查页面变化截图</span>
 
@@ -92,9 +119,21 @@ Valid Until: 2023-07-15 23:59
 
 <span style="color: red">修复后登录截图</span>
 
-### 任务6
+{{< hint info >}}
 
-将你的代码提交至远程仓库，github 或者 gitee 均可（至少保留1周），并在实验文档中说明
+修复后截图可以参考下面两个版本，只需实现一种效果即可
+
+- 简单版
+
+  ![answer2](/SE-Labs/images/lab2/answer2.png)
+
+- 进阶版
+
+  ![answer1](/SE-Labs/images/lab2/answer1.png)
+{{< /hint >}}
+### 任务 6
+
+将你的代码提交至远程仓库，github 或者 gitee 均可（至少保留 1 周），并在实验文档中说明
 
 ### 附加任务（非强制）
 
@@ -124,11 +163,11 @@ Valid Until: 2023-07-15 23:59
 
 ## 实验报告
 
-填写homework中的实验文档，简要阐明你的思路。
+填写 homework 中的实验文档，简要阐明你的思路。
 
 ## 提交方式
 
-- 截止时间：**2023/3/25 晚12点**
+- 截止时间：**2023/3/25 晚 12 点**
 
 - 提交方式：[软院云平台](https://scs.buaa.edu.cn/)
 
