@@ -48,6 +48,14 @@ NPM 是 Nodejs 下的包管理器，具备命令行接口和软件注册中心 (
 注意：在团队中一定要统一 npm 版本，不然很可能会因为兼容性差异造成各种稀奇古怪的问题。在正式的项目开发中，npm 版本、开发框架版本、Git 提交规范、代码格式规范等都是要事先规定好的。
 不想采用 NVM 安装方法，文末有推荐直接安装 NPM 的博客链接 下载 NVM # 若本地有 Nodejs 环境，下载 NVM 前需先卸载！ 第一步，下载最新版 nvm，链接如下：</description></item><item><title>Vue 创建项目</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_create_project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_create_project/</guid><description>Vue 创建项目 # 安装 vue 环境 # 在配置好 npm 环境后，我们就可以开始着手创建我们的第一个 vue 项目了。不过不要着急，在创建之前，我们还需要把 vue 相关的依赖环境安装到全局目录。vue.js 作为 vue 运行的核心部分，肯定是不可或缺的；而无论是 vue2 还是 vue3，现在主流的构建方式离不开官方的脚手架 vue-cli；此外，但凡是一个多页面项目，都离不开前端路由的架构设计。因此 vue-router 也几乎是任何 vue 项目不可或缺的一部分。
 输入以下命令，安装 vue.js、vue-router、vue-cli 脚手架到 global 全局目录：
-npm install vue -g npm install vue-router -g npm install -g @vue/cli 创建 vue 项目并配置 # 使用 vue-cli 创建 vue 项目：
+npm install vue -g npm install vue-router -g npm install -g @vue/cli Vue CLI 4.x 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)。
+创建 vue 项目并配置 # 使用 vue-cli 创建 vue 项目：
 vue create vue-project # [vue-project] 为项目名称 此时窗口如下：
-同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。</description></item></channel></rss>
+同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。</description></item><item><title>Vue 项目架构</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</guid><description>Vue 项目架构 # 在上一页我们创建了一个初始的 vue2/vue3 项目，现在本文将对这个几乎空白的项目框架进行简要介绍。
+阅读本文时并不要求理解 Vue 项目中各部分是如何编写的，只大致了解它们的用途 总体概述 # 下面是我们创建的项目的文件目录：
+简要介绍如下：
+目录/文件 说明 node_modules npm 加载的项目依赖模块 public 静态资源，build 构建后为根目录，含网站导航栏图标、首页入口文件 src 开发做的事情基本都在这个目录下，含：
+assets: 放置一些图片、字体等资源components: 放置组件文件，一般为全局组件router: 网站路由跳转设置store: 前端数据存储views: 放置各页面文件App.vue: 项目入口文件main.js: 项目的核心文件，在这里可以导入各种全局依赖 .xxx文件 配置文件，包括语法配置、git配置(.gitignore)等 package.json 项目 npm 包配置文件 package-lock.json 项目 npm 包版本控制文件 README.md 项目的说明文档 下面对主要模块进行讲解
+node_modules # node_modules 目录下放置项目所需要的依赖环境，当使用 npm install packageName --save 命令给项目添加依赖时，信息会记录于 package.json 文件的 dependencies 中，而依赖的包将存储于 node_modules。
+在该目录下，可以发现有我们在创建项目时选择的 vue-router 包，这是用于管理路由跳转的依赖。之后如果引入了某个 npm 包后，由于文档缺失等原因不熟悉其中的某个 API，可以进入对应的文件夹查看源码。
+在编辑器中可以看到该目录名字显示灰色的，因为它在 .gitignore 是被忽略的。在合作开发项目中，往往使用 git 来协调配合，而该目录内容庞大，且并非由程序员编写，因此往往不加入 git 中，在新机器上使用 npm install，则会根据 package.</description></item></channel></rss>
