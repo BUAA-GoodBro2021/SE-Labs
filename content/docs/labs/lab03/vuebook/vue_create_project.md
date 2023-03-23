@@ -17,6 +17,8 @@ npm install vue-router -g
 npm install -g @vue/cli
 ```
 
+Vue CLI 4.x 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)。
+
 ## 创建 vue 项目并配置
 
 使用 vue-cli 创建 vue 项目：
@@ -44,17 +46,17 @@ npm install vue-router@3 --save
 
 上面的英语指导已经说的很明显了，这里介绍一下这些选项的含义：
 
-- Babel：Babel编译
-- TypeScript：TypeScript支持
-- Progressive Web App (PWA) Support：PWA支持
-- Router：Vue路由，这里就是指 Vue-Router
-- Vuex：Vue状态管理
-- CSS Pre-processors：CSS预编译器（包括：SCSS/Sass、Less、Stylus）
+- Babel：Babel 编译
+- TypeScript：TypeScript 支持
+- Progressive Web App (PWA) Support：PWA 支持
+- Router：Vue 路由，这里就是指 Vue-Router
+- Vuex：Vue 状态管理
+- CSS Pre-processors：CSS 预编译器（包括：SCSS/Sass、Less、Stylus）
 - Linter / Formatter：代码检测和格式化
 - Unit Testing：单元测试
 - E2E Testing：端到端测试
 
-一般来说，vue 项目常用的就是 vuex 和 router，vue3 项目视情况会加入 TypeScript 支持。以及如果希望采用比 CSS 更高级的样式语言，则需要配置 CSS预编译器。但是，这些都可以不在这里选择，而是在项目需要时再使用 npm 安装命令（不然 vue-cli 也不会提供只含有 babel 和 eslint 的空白模板了）。前端单元测试是进阶的要求，在大体量的项目中，前端单元测试是不可或缺的。常用的单元测试解决方案是 Jest。这个 vue 和 react 均通用。
+一般来说，vue 项目常用的就是 vuex 和 router，vue3 项目视情况会加入 TypeScript 支持。以及如果希望采用比 CSS 更高级的样式语言，则需要配置 CSS 预编译器。但是，这些都可以不在这里选择，而是在项目需要时再使用 npm 安装命令（不然 vue-cli 也不会提供只含有 babel 和 eslint 的空白模板了）。前端单元测试是进阶的要求，在大体量的项目中，前端单元测试是不可或缺的。常用的单元测试解决方案是 Jest。这个 vue 和 react 均通用。
 
 选好配置模板后，接下来选择创建 vue2 项目还是 vue3 项目。我们这里先以 vue2 为例。
 
@@ -107,3 +109,18 @@ npm install vue-router@3 --save
 #### 打包部署到服务器上
 
 执行 `npm run build`，就可以看到项目被打包成了一个新的文件夹，里面的 CSS 和 HTML 文件均被压缩了。这里不做展开介绍，后续的 lab 中会教授大家部署项目的方法。
+
+
+## Vue 新推出的创建工具 create-vue
+
+从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。create-vue 是 vue 官方最近推出的 vue 项目创建工具。
+
+确保你安装了最新版本的 Node.js，然后在命令行中运行以下命令
+```shell
+npm init vue@latest
+```
+![pinia](/SE-Labs/images/lab3/pinia.png)
+
+可以看到，上面列出的全都是 vue 升级到 Vue3 后拥抱或者提高支持度的新技术，TypeScript，JSX，Vite…… 可以说，官方在考虑在未来用 `create-vue` 来代替 `vue-cli` 脚手架。更多的详细信息参见 <a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank">https://cn.vuejs.org/guide/quick-start.html</a>
+
+虽然如此，`vue-cli` 仍然是目前最常用的 vue 创建脚手架，且无论采用哪种方式，创建的 vue 项目是没有本质区别的。
