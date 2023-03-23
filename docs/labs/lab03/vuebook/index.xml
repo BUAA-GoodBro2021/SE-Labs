@@ -7,7 +7,7 @@ NPM 是 Nodejs 下的包管理器，具备命令行接口和软件注册中心 (
 npm install vue -g npm install vue-router -g npm install -g @vue/cli Vue CLI 4.x 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)。
 创建 vue 项目并配置 # 使用 vue-cli 创建 vue 项目：
 vue create vue-project # [vue-project] 为项目名称 此时窗口如下：
-同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。</description></item><item><title>Vue 项目架构</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</guid><description>Vue 项目架构 # 在上一页我们创建了一个初始的 vue2/vue3 项目，现在本文将对这个几乎空白的项目框架进行简要介绍。
+同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router 的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。</description></item><item><title>Vue 项目架构</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab03/vuebook/vue_structure/</guid><description>Vue 项目架构 # 在上一页我们创建了一个初始的 vue2/vue3 项目，现在本文将对这个几乎空白的项目框架进行简要介绍。
 阅读本文时并不要求理解 Vue 项目中各部分是如何编写的，只大致了解它们的用途 总体概述 # 下面是我们创建的项目的文件目录：
 简要介绍如下：
 目录/文件 说明 node_modules npm 加载的项目依赖模块 public 静态资源，build 构建后为根目录，含网站导航栏图标、首页入口文件 src 开发做的事情基本都在这个目录下，含：
