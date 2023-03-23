@@ -46,9 +46,9 @@ npm install vue-router@3 --save
 
 上面的英语指导已经说的很明显了，这里介绍一下这些选项的含义：
 
-- Babel：Babel 编译
-- TypeScript：TypeScript 支持
-- Progressive Web App (PWA) Support：PWA 支持
+- Babel：Babel 语法转换支持
+- TypeScript：TypeScript 类型支持
+- Progressive Web App (PWA) Support：PWA 原生功能支持
 - Router：Vue 路由，这里就是指 Vue-Router
 - Vuex：Vue 状态管理
 - CSS Pre-processors：CSS 预编译器（包括：SCSS/Sass、Less、Stylus）
@@ -88,7 +88,7 @@ npm install vue-router@3 --save
 
 ![step7](/SE-Labs/images/lab3/step7.png)
 
-有些情况下还会遇到选择包管理器（package manger），这里对于 pnpm 和 npm 不做过多介绍，感兴趣的同学可以查看 [pnmp 中文文档](https://www.pnpm.cn/)
+有些情况下还会遇到选择包管理器（package manger），这里对于 pnpm 和 npm 不做过多介绍，感兴趣的同学可以查看 [pnpm 中文文档](https://www.pnpm.cn/)
 
 ![step8](/SE-Labs/images/lab3/step8.png)
 
@@ -115,9 +115,9 @@ npm install vue-router@3 --save
 执行 `npm run build`，就可以看到项目被打包成了一个新的文件夹，里面的 CSS 和 HTML 文件均被压缩了。这里不做展开介绍，后续的 lab 中会教授大家部署项目的方法。
 
 
-## Vue 新推出的项目创建工具 create-vue
+## Vue3 的项目创建工具 create-vue
 
-create-vue 是 vue 官方最近推出的 vue 项目创建工具。
+create-vue 是 vue 官方2021年推出的基于 Vite 的 vue3 项目创建工具。
 
 确保你安装了最新版本的 Node.js，然后在命令行中运行以下命令
 ```shell
@@ -125,10 +125,14 @@ npm init vue@latest
 ```
 ![pinia](/SE-Labs/images/lab3/pinia.png)
 
-可以看到，上面列出的全都是 vue 升级到 Vue3 后拥抱或者提高支持度的新技术，TypeScript，JSX，Vite…… 可以说，官方在考虑在未来用 `create-vue` 来代替 `vue-cli` 脚手架。更多的详细信息参见 <a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank">https://cn.vuejs.org/guide/quick-start.html</a>
+可以看到，上面列出的全都是 vue 升级到 Vue3 后拥抱或者提高支持度的新技术，TypeScript，JSX …… 可以说，官方推荐用 `create-vue` 来代替 `vue-cli` 脚手架。更多的详细信息参见 <a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank">https://cn.vuejs.org/guide/quick-start.html</a>
 
 虽然如此，`vue-cli` 仍然是目前最常用的 vue 创建脚手架，且无论采用哪种方式，创建的 vue 项目是没有本质区别的。
 
 {{< hint info >}}
-PS：从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。而且 Vue3 的组合式 API 和 React 的 hooks 与 函数式组件更接近了……框架的事情，大家都在相互借鉴嘛。
+`create-vue`和`vue-cli`最大的区别在于：`create-vue`是基于`Vite`的，而`vue-cli`是基于`Webpack`的。`Vite`是一个基于浏览器原生 ES Module 的新一代前端打包工具，它的出现是为了解决`Webpack`在开发中的性能问题。`Vite`是前端开发的未来，但`Webpack`仍然是目前前端占有率最高的打包工具。
+{{< /hint >}}
+
+{{< hint info >}}
+PS：从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。而且 Vue3 的组合式 API 和 React 的 hooks 与 函数式组件更接近了，Vue的指令写法也和Angular有很多相似之处 ……框架的事情，大家都在相互借鉴嘛。
 {{< /hint >}}

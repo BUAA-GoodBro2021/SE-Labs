@@ -7,11 +7,11 @@ weight: 20031
 
 使用 Vue.js 的方式有很多，包括直接用 script 标签引入、使用 CDN 方法引入、NPM 方法安装等。在一般较大的项目开发中，都会采取后者，这里也仅对 NPM 安装方式进行介绍。
 
-NPM 是 Nodejs 下的包管理器，具备命令行接口和软件注册中心 (registry)，使用 npm 可以安装、管理、运行 packages，为项目代码适配 packages 等。本教程常用的是用它来安装环境包（如 vue-cli），以及运行 vue 等前端项目（npm run serve）。
+在安装 NPM 前，我们首先需要准备好 Node.js 环境。Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，使得 JavaScript 可以脱离浏览器运行。 NPM 是 Node.js 自带的包管理器，具备命令行接口和软件注册中心 (registry)，使用 NPM 可以安装、管理、运行 packages，为项目代码适配 packages 等。本教程常用的是用它来安装环境包（如 vue-cli），以及运行 vue 等前端项目（npm run serve）。
 
-下载 NPM，有两种方法，直接下载使用一个特定版本，或安装 NVM（npm version manager）可管理多个 NPM 版本环境。这里教程推荐的是使用 NVM 安装。原因是 Nodejs 版本更新快，向前兼容性较差，很容易平时使用的版本无法安装某个插件环境。比如 v14 安装了 vue 环境，此时想在本地安装 gitbook 环境，发现很多插件要求 v10，如果采用的单一版本就无法使用这些插件。而 nvm 就是类似 conda 的环境管理器，允许在一台机器拥有多个 NPM 版本环境。
+下载 NPM，有两种方法，直接下载使用一个特定版本的 Node.js，或安装 NVM（npm version manager）可管理多个 Node.js 版本环境。本教程推荐的是使用 NVM 安装。原因是 Node.js 版本更新快，向前兼容性较差，很容易发生平时使用的版本无法安装某个插件环境的情况。比如 v14 安装了 vue 环境，此时想在本地安装 gitbook 环境，发现很多插件要求 v10，如果采用的单一版本就无法使用这些插件。而 nvm 就是类似 conda 的 Node.js 环境管理器，允许在一台机器拥有多个 Node.js 和 NPM 版本环境。
 
-注意：在团队中一定要统一 npm 版本，不然很可能会因为兼容性差异造成各种稀奇古怪的问题。在正式的项目开发中，npm 版本、开发框架版本、Git 提交规范、代码格式规范等都是要事先规定好的。
+注意：在团队中一定要尽量统一环境，不然很可能会因为兼容性差异造成各种稀奇古怪的问题。在正式的项目开发中，Node.js 和 NPM 版本、开发框架版本、Git 提交规范、代码格式规范等都是要事先规定好的。
 
 {{< hint info >}}
 不想采用 NVM 安装方法，文末有推荐直接安装 NPM 的博客链接
@@ -20,10 +20,10 @@ NPM 是 Nodejs 下的包管理器，具备命令行接口和软件注册中心 (
 ## 下载 NVM
 
 {{< hint warning >}}
-若本地有 Nodejs 环境，下载 NVM 前需先卸载！
+若本地有 Node.js 环境，下载 NVM 前需先卸载！
 {{< /hint >}}
 
-第一步，下载最新版 nvm，链接如下：
+第一步，下载最新版 NVM ，链接如下：
 
 1. Windows 版本：<a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">https://github.com/coreybutler/nvm-windows/releases</a>，下载 nvm-setup.zip
 
@@ -67,10 +67,10 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 ```shell
 nvm --version               # 查看nvm版本
-nvm install latest          # 安装最新版 nodejs
+nvm install latest          # 安装最新版 Node.js
 nvm install <version>       # 安装指定版本 For examle:
 nvm install v14.16.0
-nvm ls                      # 查看已安装的 nodejs 版本
+nvm ls                      # 查看已安装的 Node.js 版本
 nvm use v14.16.0            # 切换使用 v10.13.0 版本
 nvm alias default 14.16.0   # 设置默认版本
 ```
@@ -90,13 +90,13 @@ nvm use v14.16.0
 npm --version
 ```
 
-出现版本号即说明 npm 安装成功。v14.16.0 版本的 nvm 对应的 npm 版本应该是 6.14.11。每个 nvm 的版本都对应管理了若干 npm 版本，他们之间的对应关系可以在 node.js 的官网查到。
+出现版本号即说明 npm 安装成功。v14.16.0 版本的 Node.js 对应的 npm 版本应该是 6.14.11。每个 Node.js 的版本都对应管理了指定 npm 版本，他们之间的对应关系可以在 node.js 的官网查到。
 
 注意：这里虽然是按照 v14.16.0 这个公认的稳定版本带大家进行设置，但是其对应的 npm 版本是相对较老的。在 npm 7 版本进行了较大的改动，突出表现为 `lockfileVersion@1` 和 `lockfileVersion@2` 的不同。因此，建议大家组内统一 npm 版本，否则会造成不必要的麻烦。
 
 ## 后言
 如果不想采用本文章所讲的『Nvm管理和Npm安装』的方式，可以参考以下链接直接安装 NPM：
 
-[安装Node.js和npm - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1022910821149312/1023025597810528)
+<a href="https://www.liaoxuefeng.com/wiki/1022910821149312/1023025597810528" target="_blank">安装Node.js和npm - 廖雪峰的官方网站</a>
 
-[Vue.js 安装 - 菜鸟教程](https://www.runoob.com/vue2/vue-install.html)
+<a href="https://www.runoob.com/vue2/vue-install.html" target="_blank">Vue.js 安装 - 菜鸟教程</a>
