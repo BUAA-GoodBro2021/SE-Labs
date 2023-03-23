@@ -30,10 +30,10 @@ vue create vue-project      # [vue-project] 为项目名称
 
 ![step1](/SE-Labs/images/lab3/step1.png)
 
-同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。
+同学们由于是第一次创建 vue 项目，应该没有第一项。事实上第一项是个性化设置的一个保存，以便下一次创建项目时，“一键导入个性化配置”来创建项目。大家可以看出来，默认的 vue2 和 vue3 项目配置是没有 vuex 和 router 的。这意味着如果按照这 2 个模板去创建项目，之后是需要执行 npm 安装命令手动导入的。
 
 {{< hint warning >}}
-由于 vue2 和 vue3 存在差异，众多工具库也进行了大版本更新，vuex 和 vue-router 默认下载后对应的版本是 4，和 vue3对应，如果说是在 vue2 项目创建时没有选择 vuex 和 router，那么就需要后续执行 npm 安装命令，此时要精确安装到对应版本。安装对应到 vue2 的两个库命令如下：
+由于 vue2 和 vue3 存在差异，众多工具库也进行了大版本更新，vuex 和 vue-router 默认下载后对应的版本是 4，和 vue3 对应，如果说是在 vue2 项目创建时没有选择 vuex 和 router，那么就需要后续执行 npm 安装命令，此时要精确安装到对应版本。安装对应到 vue2 的两个库命令如下：
 ```shell
 npm i vuex@3 --save
 npm install vue-router@3 --save
@@ -62,11 +62,15 @@ npm install vue-router@3 --save
 
 ![step3](/SE-Labs/images/lab3/step3.png)
 
-下一个选项是选择 router 的模式是否为 history 模式。前端路由模式主要分为 Hash 和 History 两种模式，前者拥有更好的兼容性，但是会使得路由中多一个 #。在 IE 浏览器退出历史舞台的今天，我们一般选择 History 模式就足够了。关于两种模式，同学们在学习 vue-router 时会具体了解。
+下一个选项是选择 router 的模式是否为 history 模式。前端路由模式主要分为 Hash 和 History 两种模式，前者拥有更好的兼容性，但是会使得路由中多一个 `#`。在 IE 浏览器退出历史舞台的今天，我们一般选择 History 模式就足够了。关于两种模式，同学们在学习 vue-router 时会具体了解。
 
 ![step4](/SE-Labs/images/lab3/step4.png)
 
-接下来是选择 ESLint 的代码规范，这里选择 ESLint + Standard config。其他选项感兴趣的同学可以自行查找。其中 prettier 也是很有名的代码规范辅助工具，VS Code 上有对应的插件。进行代码规范是在企业级别的项目中必不可少的一环，试想一下，如果说一个项目中，开发团队中的每一个程序员都按照自己的习惯来进行编程，那么最后整个项目的代码风格千奇百怪，不仅不雅观，更为后续的维护和迭代带来了极大的困难。我们这里的 ESLint 起不到如此具体的限制（比如缩进是几个空白符，行末是否要添加分号等），更多地是在检测到一些明显的语法错误时提醒开发者。
+接下来是选择 ESLint 的代码规范，这里选择 `ESLint + Standard config`。其他选项感兴趣的同学可以自行查找。其中 prettier 也是很有名的代码规范辅助工具，VS Code 上有对应的插件。
+
+{{< hint warning >}}
+进行代码规范是在企业级别的项目中必不可少的一环，试想一下，如果说一个项目中，开发团队中的每一个程序员都按照自己的习惯来进行编程，那么最后整个项目的代码风格千奇百怪，不仅不雅观，更为后续的维护和迭代带来了极大的困难。我们这里的 ESLint 起不到如此具体的限制（比如缩进是几个空白符，行末是否要添加分号等），更多地是在检测到一些明显的语法错误时提醒开发者。
+{{< /hint >}}
 
 ![step5](/SE-Labs/images/lab3/step5.png)
 
@@ -98,7 +102,7 @@ npm install vue-router@3 --save
 
 #### 本地运行项目
 
-执行 `npm run serve`，就可以看到项目在 8080 端口运行起来了。成功运行后，访问 http://localhost:8080/ 即可看到 vue 项目的默认界面。
+执行 `npm run serve`，就可以看到项目在 8080 端口运行起来了。成功运行后，访问 `http://localhost:8080/` 即可看到 vue 项目的默认界面。
 
 ![step11](/SE-Labs/images/lab3/step11.png)
 
@@ -111,9 +115,9 @@ npm install vue-router@3 --save
 执行 `npm run build`，就可以看到项目被打包成了一个新的文件夹，里面的 CSS 和 HTML 文件均被压缩了。这里不做展开介绍，后续的 lab 中会教授大家部署项目的方法。
 
 
-## Vue 新推出的创建工具 create-vue
+## Vue 新推出的项目创建工具 create-vue
 
-从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。create-vue 是 vue 官方最近推出的 vue 项目创建工具。
+create-vue 是 vue 官方最近推出的 vue 项目创建工具。
 
 确保你安装了最新版本的 Node.js，然后在命令行中运行以下命令
 ```shell
@@ -124,3 +128,7 @@ npm init vue@latest
 可以看到，上面列出的全都是 vue 升级到 Vue3 后拥抱或者提高支持度的新技术，TypeScript，JSX，Vite…… 可以说，官方在考虑在未来用 `create-vue` 来代替 `vue-cli` 脚手架。更多的详细信息参见 <a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank">https://cn.vuejs.org/guide/quick-start.html</a>
 
 虽然如此，`vue-cli` 仍然是目前最常用的 vue 创建脚手架，且无论采用哪种方式，创建的 vue 项目是没有本质区别的。
+
+{{< hint info >}}
+PS：从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。而且 Vue3 的组合式 API 和 React 的 hooks 与 函数式组件更接近了……框架的事情，大家都在相互借鉴嘛。
+{{< /hint >}}
