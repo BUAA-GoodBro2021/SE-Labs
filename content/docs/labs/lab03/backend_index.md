@@ -5,7 +5,7 @@ weight: 2002
 
 # Lab03 后端进阶
 
-## 前请提醒
+## 前情提醒
 
 大家目前接触过的 java 大部分属于 javaSE 部分，而后端框架一般属于 javaEE 部分，javaSE 和 javaEE 二者之间的区别还是很大的，而且 SpringBoot 该框架要求的前置知识较多，因为SprintBoot 是 Spring 全家桶的整合，需要了解 Spring，SpringMVC，MyBatis（MyBatis-plus）三件套的基本知识，同时在面对增删改查的复杂逻辑时需要手写 SQL 语句，所以不太适合后端新手同学使用该框架作为后端框架的入门。
 
@@ -60,7 +60,7 @@ Valid Until: 2023-07-15 23:59
 
 ##### 提交方式
 
-- 截止时间：**2023/4/1 晚12点**
+- 截止时间：**2023/3/31 晚12点**
 - 提交方式：<a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 - 提交内容：实现上述任务1和3功能后的项目代码文件夹<span style="color: red">（高手可以提供任务2）</span>，和实验报告，命名格式如下：
 
