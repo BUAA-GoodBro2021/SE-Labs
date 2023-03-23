@@ -1,5 +1,5 @@
 ---
-title: 'Django入门篇（修订中...）'
+title: 'Django入门篇'
 weight: 2004
 ---
 
@@ -31,10 +31,6 @@ Anaconda下载地址：
 {{< /hint >}}
 
 安装 Anaconda 后，使用 conda 指令新建一个虚拟环境，用于开发 Django 项目：
-
-注意：**请不要创建 python 大等于 3.10 的环境**，因为python的版本需要和 Django 的版本需要适配，目前常用的版本是 Django=4.x.x，其主要支持的 python 版本为 3.9。如果创建3.10 以上的版本在接下来的迁移数据库的实验操作中会遇到下面的报错，提示版本不兼容。
-
-> django.db.utils.NotSupportedError: deterministic=True requires SQLite 3.8.3 or higher
 
 ```shell
 conda create --name django python=3.9   # 虚拟环境名为django，python版本指定3.9
@@ -260,10 +256,10 @@ python manage.py migrate        # 迁移数据库模型
 >os.system("python manage.py migrate")
 >
 >if platform.system() != "Linux":
->os.system("python manage.py runserver")
+>	os.system("python manage.py runserver")
 ># 本地环境，直接运行
 >else:
->os.system("python manage.py runserver 0.0.0.0:8000 > log.txt & \n")
+>	os.system("python manage.py runserver 0.0.0.0:8000 > log.txt & \n")
 >print("The backend is running!")
 ># 服务器环境，后台运行
 >```
@@ -581,7 +577,7 @@ urlpatterns = [
 
 
 
-### 使用 MySQL（拓展内容）
+### 使用 MySQL<span style="color: red">（拓展内容）</span>
 
 实际上我们并不是经常使用 db.sqlite这个 Django 自己生成的数据库文件，因为这个数据库文件安全性不足，无法像MySQL一般有数据备份等安全性操作，而且面对需要存储大量数据的场景的时候db.sqlite 无法优秀的完成任务，因此在实际的开发场景我们经常常用 MySQL 等常用的关系性数据库。
 
