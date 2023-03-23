@@ -17,7 +17,7 @@ weight: 2001
 
 ## 资源链接
 
-https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B
+<a href="https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B" target="_blank">https://bhpan.buaa.edu.cn:443/link/3A508B02D5CE20902AE2983009CE5D1B</a>
 
 Valid Until: 2023-07-15 23:59
 
