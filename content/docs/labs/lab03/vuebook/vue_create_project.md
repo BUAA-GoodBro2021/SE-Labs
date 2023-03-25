@@ -76,13 +76,13 @@ npm install vue-router@3 --save
 
 接下来选择进行 ESLint 检查的时机。这里没有特殊要求，看自己的需求。
 - Lint on save：在保存时进行检测
-- Lint and fix on commit：在fix和commit时进行检查
+- Lint and fix on commit：在 fix 和 commit 时进行检查
 
 ![step6](/SE-Labs/images/lab3/step6.png)
 
-选择 Babel，ESLint（如果选择了CSS预处理器，这里还有 PostCSS）等配置文件的存放位置。这里一般选择 In dedicated config files。
+选择 Babel，ESLint（如果选择了 CSS 预处理器，这里还有 PostCSS）等配置文件的存放位置。这里一般选择 In dedicated config files。
 - In dedicated config files：单独保存在各自的配置文件中
-- In package.json：保存在package.json文件中
+- In package.json：保存在 `package.json` 文件中
 
 最后，个性化配置完毕，我们可以选择是否保存这一次的配置。如果选择 N，那么只会根据这套方案配置一次项目。如果选择 Y，那么还需要输入自己为这套方案定下的名字，这样在下次创建项目时，以这个名字命名的项目配置方案就会出现在选项中。
 
@@ -130,9 +130,9 @@ npm init vue@latest
 虽然如此，`vue-cli` 仍然是目前最常用的 vue 创建脚手架，且无论采用哪种方式，创建的 vue 项目是没有本质区别的。
 
 {{< hint info >}}
-`create-vue`和`vue-cli`最大的区别在于：`create-vue`是基于`Vite`的，而`vue-cli`是基于`Webpack`的。`Vite`是一个基于浏览器原生 ES Module 的新一代前端打包工具，它的出现是为了解决`Webpack`在开发中的性能问题。`Vite`是前端开发的未来，但`Webpack`仍然是目前前端占有率最高的打包工具。
+`create-vue `和 `vue-cli` 最大的区别在于：`create-vue` 是基于 `Vite` 的，而 `vue-cli` 是基于 `Webpack` 的。`Vite` 是一个基于浏览器原生 ES Module 的新一代前端打包工具，它的出现是为了解决 `Webpack` 在开发中的性能问题，相比 `Webpack` 的全局引入，`Vite` 的按需引入大大提高了开发时的项目运行性能。`Vite` 是前端开发的未来，但 `Webpack` 仍然是目前前端占有率最高的打包工具。
 {{< /hint >}}
 
 {{< hint info >}}
-PS：从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。而且 Vue3 的组合式 API 和 React 的 hooks 与 函数式组件更接近了，Vue的指令写法也和Angular有很多相似之处 ……框架的事情，大家都在相互借鉴嘛。
+PS：从名字上看，很难说和 **创建 react 项目的工具 create-react-app** 没有关系。而且 Vue3 的组合式 API 和 React 的 hooks 与 函数式组件更接近了，Vue 的指令写法也和 Angular 有很多相似之处 ……框架的事情，大家都在相互借鉴嘛。
 {{< /hint >}}

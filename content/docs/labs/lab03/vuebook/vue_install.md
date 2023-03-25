@@ -56,7 +56,7 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 当然，如果说不愿意直接改配置文件，也可以通过 nrm 的方式来管理 npm 镜像源。nrm（npm registry manager）是 npm 的镜像管理工具，使用它可以快速地在 npm 源间切换。
 
-在命令行执行命令，`npm install -g nrm`，全局安装 nrm。执行命令 `nrm ls` 查看可选的源。如果要切换到taobao源，执行命令 `nrm use taobao`。
+在命令行执行命令，`npm install -g nrm`，全局安装 nrm。执行命令 `nrm ls` 查看可选的源。如果要切换到 taobao 源，执行命令 `nrm use taobao`。
 
 ![nrm](/SE-Labs/images/lab3/nrm.png)
 
