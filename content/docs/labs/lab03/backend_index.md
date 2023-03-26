@@ -13,6 +13,12 @@ weight: 2002
 
 如果在SpringBoot上遇到什么问题可以先尝试自己解决（因为Zhoues也不太熟），如果真的遇到的问题，可以请教群里面的SpringBoot大神，当然还是建议花更多的时间在 Django 上！
 
+## <span style="color: red">紧急提醒！！！！！</span>
+
+<span style="color: red">SpringBoot配置更新到 spring boot3.0.5 同时对应mybatis-spring-boot-starter版本要到3.0.1</span>
+
+如果是 SpringBoot 2还是根据视频来
+
 ## 实验目的
 
 - 学习使用maven管理配置依赖
