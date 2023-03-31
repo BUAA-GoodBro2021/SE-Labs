@@ -23,7 +23,7 @@ Valid Until: 2023-07-15 23:59
 ## 实验指南
  
 1. 查看资源链接中 **Vue** 和 **CSS** 相关的内容
-2. 完成实验作业并于 3.31 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
+2. 完成实验作业并于 4.7 日晚 12 点前提交至 <a href="https://scs.buaa.edu.cn/" target="_blank">软院云平台</a>
 
 ## 实验作业
 
@@ -60,7 +60,7 @@ Valid Until: 2023-07-15 23:59
 
 ### 任务 5
 
-Login 组件中的按钮应该使用 ElementUI 的按钮，在未登录时显示状态 1，在登录时显示状态 2。
+Login 组件中的按钮应该使用 ElementUI （如果是 vue3 的项目则应该是 ElementPlus）的按钮，在未登录时显示状态 1，在登录时显示状态 2。
 
 {{< hint info >}}
 登录按钮和未登录按钮展示需要使用 v-if 条件渲染，两者各绑定一个事件，分别对应触发 vuex 的 mutation（login 和 logout）。
@@ -79,7 +79,7 @@ Login 组件中的按钮应该使用 ElementUI 的按钮，在未登录时显示
 
 ## 提交方式
 
-- 截止时间：**2022/3/31 晚 12 点**
+- 截止时间：**2022/4/7 晚 12 点**
 
 - 提交方式：[软院云平台](https://scs.buaa.edu.cn/)
 
