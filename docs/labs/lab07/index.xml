@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lab07 项目部署 on 软件工程基础上机指南</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab07/</link><description>Recent content in Lab07 项目部署 on 软件工程基础上机指南</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab07/index.xml" rel="self" type="application/rss+xml"/><item><title>CI/CD 简介</title><link>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab07/CI_CD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://BUAA-GoodBro2021.github.io/SE-Labs/docs/labs/lab07/CI_CD/</guid><description>Lab07 CI/CD 简介 # CI/CD 基本概念 # CI/CD 指的是持续集成(Continuous Integration)、持续交付(Continuous Delivery)和持续部署(Continuous Deployment)。
+在软件开发过程中，会经历开发、构建、测试、发布、部署等过程，在产品的迭代过程中，这些过程会不断地重复进行。
+现在试想一下，你是一名测试人员，已经写好了很多测试用例，但是开发人员每次更新代码你都要手动重新构建软件，运行所有的测试用例并给出反馈，这是非常痛苦的。
+CI/CD 就是将这些过程自动化的工具或者服务，请阅读这一篇 知乎文章了解更详细的信息。
+简单来说，可以认为如下的观点是正确的：
+持续集成：自动化地进行软件构建(Build)、测试(Test)、代码合并(Merge) 持续交付：自动化地进行软件代码的发布(Release)，发布的代码可以稳定地在生产环境中使用 持续部署：自动化地进行软件的部署(Deploy)，将代码库中的代码实际部署到生产环境中 常用的 CI/CD 工具 # CI/CD 的工具可以说是数不胜数，有无数种方案可以实现 CI/CD 的工作流。
+根据项目的不同，选择的 CI/CD 工具很可能会不一样，这里简单地列出一些 CI/CD 工具：
+Github Actions Jenkins Circle CI Gitlab CI Bitbucket Pipelines Azure DevOps 当需要用到这些工具的时候，再去查阅相关的官方文档就可以了，软件开发不就是看文档写文档嘛，有什么难的（bushi
+大作业 CI/CD 推荐方案 # 虽然大作业不强制要求部署到云服务器上，但是我们建议每个小组都购买一台云服务器，并且实现在云服务器上部署你们的网站。一些云服务器可以按小时计费，最基础的云服务器包年大概在100 元左右(学生价)。 我们推荐在 Github 上实现大作业前后端的 CI/CD，前后端各自一个仓库，两个仓库采用各自的 CI/CD 工作流。在向仓库的 main 分支 push 之后，利用 Github Actions 自动化地实现前后端项目在云服务器上的自动部署。
+关于 Github Actions 的简单介绍，可以看看 这篇博客。</description></item></channel></rss>
